@@ -53,94 +53,76 @@
 </head>
 <body class="antialiased">
     <header class="bg-blue-50 shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex-shrink-0">
-                    <h1 class="text-xl font-bold text-gray-800">生成式AI工作坊</h1>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#overview" class="nav-link px-3 py-2 text-sm font-medium text-gray-500 hover:text-blue-500 border-b-2 border-transparent">課程總覽</a>
-                        <a href="#agenda" class="nav-link px-3 py-2 text-sm font-medium text-gray-500 hover:text-blue-500 border-b-2 border-transparent">詳細議程</a>
-                        <a href="#skills" class="nav-link px-3 py-2 text-sm font-medium text-gray-500 hover:text-blue-500 border-b-2 border-transparent">核心技能</a>
-                        <a href="#info" class="nav-link px-3 py-2 text-sm font-medium text-gray-500 hover:text-blue-500 border-b-2 border-transparent">講師資訊</a>
-                    </div>
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-bold text-gray-800">課程大綱</div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#overview" class="nav-link text-gray-600 hover:text-blue-600 pb-1 border-b-2 border-transparent">課程總覽</a>
+                    <a href="#agenda" class="nav-link text-gray-600 hover:text-blue-600 pb-1 border-b-2 border-transparent">詳細議程</a>
+                    <a href="#skills" class="nav-link text-gray-600 hover:text-blue-600 pb-1 border-b-2 border-transparent">核心技能</a>
+                    <a href="#instructor" class="nav-link text-gray-600 hover:text-blue-600 pb-1 border-b-2 border-transparent">講師資訊</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-        <section id="overview" class="scroll-mt-20">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">生成式AI實務應用工作坊 (一)</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">專為公務應用設計，旨在提升您的個人行政效能，一天掌握AI協作的關鍵技巧。</p>
-            </div>
+    <main class="container mx-auto px-6 py-12">
+        <section id="overview" class="text-center">
+            <h1 class="text-4xl font-bold text-gray-900">生成式AI實務應用工作坊(一)</h1>
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">本課程聚焦於「生成式AI工具」的公務應用，透過實務操作，引導同仁將AI無縫融入日常工作，有效提升個人行政效能。</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-                    <h3 class="font-bold text-lg text-blue-600 mb-2">課程目標</h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
-                        <li>建立生成式AI的正確觀念</li>
-                        <li>掌握「提示工程」核心技巧</li>
-                        <li>熟練運用AI工具輔助行政工作</li>
-                    </ul>
+            <div class="mt-10 grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                    <h3 class="text-xl font-semibold text-gray-800">課程目標</h3>
+                    <p class="mt-2 text-gray-600">學習使用AI生成文字、影像，並應用於公文草擬、會議記錄、報告摘要等，將AI轉化為強大的工作助手。</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-                    <h3 class="font-bold text-lg text-blue-600 mb-2">課程對象</h3>
-                    <p class="text-gray-700 text-sm">勞動力發展署中彰投分署 員工</p>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                    <h3 class="text-xl font-semibold text-gray-800">課程時間</h3>
+                    <p class="mt-2 text-gray-600">上午 09:00 - 12:00<br>下午 13:00 - 16:00</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-                    <h3 class="font-bold text-lg text-blue-600 mb-2">課程時間</h3>
-                    <p class="text-gray-700 text-sm">上午 09:00 - 12:00<br>下午 13:00 - 16:00</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-                    <h3 class="font-bold text-lg text-blue-600 mb-2">學員準備</h3>
-                    <p class="text-gray-700 text-sm">請自備筆電，並預先註冊 ChatGPT、Gemini、Claude 或 Microsoft Copilot 帳號。</p>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                    <h3 class="text-xl font-semibold text-gray-800">適合對象</h3>
+                    <p class="mt-2 text-gray-600">請自備筆電，並於課前完成註冊 ChatGPT、Gemini、Claude 或 Microsoft Copilot 帳號。</p>
                 </div>
             </div>
         </section>
 
-        <section id="agenda" class="mt-20 scroll-mt-20">
-             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900">課程詳細議程</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">本工作坊結合觀念建立與實作練習，確保學員能將所學應用於日常公務情境中。</p>
-            </div>
-            
-            <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 border border-gray-100">
-                <div class="flex justify-center mb-6">
-                    <div class="inline-flex rounded-lg bg-gray-100 p-1">
-                        <button id="morning-tab" class="tab-button active px-6 py-2 text-sm font-medium rounded-md transition-colors">上午場</button>
-                        <button id="afternoon-tab" class="tab-button px-6 py-2 text-sm font-medium rounded-md transition-colors">下午場</button>
-                    </div>
+        <section id="agenda" class="mt-20">
+            <h2 class="text-3xl font-bold text-center text-gray-900">詳細議程</h2>
+            <div class="mt-8 max-w-4xl mx-auto">
+                <div class="flex justify-center border-b border-gray-200">
+                    <button id="morning-tab" class="tab-button py-2 px-6 font-semibold text-gray-600 focus:outline-none active">上午場</button>
+                    <button id="afternoon-tab" class="tab-button py-2 px-6 font-semibold text-gray-600 focus:outline-none">下午場</button>
                 </div>
 
-                <div id="morning-content">
-                    <h3 class="text-xl font-bold text-center text-blue-600 mb-6">觀念建立與核心技巧實作</h3>
-                    <div class="px-4 sm:px-6 lg:px-8 space-y-8">
+                <div id="morning-content" class="mt-6 bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+                    <div class="space-y-8">
                         <div>
-                            <p class="text-sm font-semibold text-blue-500">09:00 - 09:20</p>
-                            <h4 class="font-bold text-lg mt-1">單元一：啟程－AI時代的行政新風貌</h4>
-                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-1">
-                                <li>課程介紹與暖身活動</li>
-                                <li>生成式AI是什麼？與傳統AI的差異</li>
-                                <li>主流AI工具介紹與比較</li>
+                            <p class="text-sm font-semibold text-blue-500">09:00 - 09:30</p>
+                            <h4 class="font-bold text-lg mt-1">單元一：啟程 ~ AI時代的行政新風貌</h4>
+                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-2">
+                                <li>AI能力展演：見證AI如何從「聊天」變「戰友」</li>
+                                <li class="pl-4 flex items-center gap-x-4">
+                                    <span class="font-semibold text-gray-800">展演A：</span>資訊整理魔法 ~ 秒速搞定會議記錄
+                                    <button onclick="openModal('modalUnit1A')" class="text-xs bg-blue-100 text-blue-700 hover:bg-blue-200 px-2 py-1 rounded-md">查看素材</button>
+                                </li>
+                                <li class="pl-4 flex items-center gap-x-4">
+                                    <span class="font-semibold text-gray-800">展演B：</span>一文多用魔法 - 一份資料，多種用途
+                                    <button onclick="openModal('modalUnit1B')" class="text-xs bg-blue-100 text-blue-700 hover:bg-blue-200 px-2 py-1 rounded-md">查看素材</button>
+                                </li>
+                                <li class="pl-4"><span class="font-semibold text-gray-800">展演C：</span>視覺化魔法 - 文字轉為吸睛圖片</li>
                             </ul>
                         </div>
-                        <div>
-                            <p class="text-sm font-semibold text-blue-500">09:20 - 10:20</p>
-                            <h4 class="font-bold text-lg mt-1">單元二：基礎核心－與AI高效溝通的藝術「提示工程」(Prompt Engineering)</h4>
-                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-1">
-                                <li>核心觀念：提示詞品質決定產出品質</li>
-                                <li>四大要素：角色、任務、背景、格式</li>
-                                <li><span class="font-semibold text-gray-800">【實作】</span>優化一份活動通知信</li>
+                        <div class="border-t border-gray-200 pt-8">
+                            <p class="text-sm font-semibold text-blue-500">09:30 - 10:20</p>
+                            <h4 class="font-bold text-lg mt-1">單元二：基礎核心 ~ 與AI高效溝通的藝術：提示詞</h4>
+                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-2">
+                                <li>核心觀念：提示詞的品質，決定產出的品質</li>
+                                <li>四大關鍵要素拆解：角色、任務、背景、格式</li>
+                                <li><span class="font-semibold text-gray-800">【實作】</span>優化模糊指令「寫一篇宣傳文，讓更多人知道我們新推出的訓練課程。」</li>
                             </ul>
                         </div>
-                        <div>
-                            <p class="text-sm font-semibold text-blue-500">10:20 - 10:30</p>
-                            <h4 class="font-bold text-lg mt-1">休息時間</h4>
-                        </div>
-                        <div>
+                        <div class="border-t border-gray-200 pt-8">
                             <p class="text-sm font-semibold text-blue-500">10:30 - 12:00</p>
                             <h4 class="font-bold text-lg mt-1">單元三：行政效率實戰(一):資訊彙整與文本優化</h4>
                             <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-2">
@@ -159,37 +141,31 @@
                     </div>
                 </div>
 
-                <div id="afternoon-content" class="hidden">
-                    <h3 class="text-xl font-bold text-center text-blue-600 mb-6">公務情境深度應用</h3>
-                    <div class="px-4 sm:px-6 lg:px-8 space-y-8">
+                <div id="afternoon-content" class="hidden mt-6 bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+                    <div class="space-y-8">
                         <div>
                             <p class="text-sm font-semibold text-blue-500">13:00 - 14:20</p>
                             <h4 class="font-bold text-lg mt-1">單元四：公務應用實戰(二)：公文草擬與會議管理</h4>
-                             <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-1">
-                                <li>核心應用：輔助撰寫「函」、「簽」等公文草稿</li>
-                                <li>注意事項：查證責任與機密資訊保護</li>
+                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-2">
+                                <li>AI輔助公文草擬的原則、風險與資安觀念</li>
                                 <li><span class="font-semibold text-gray-800">【實作】</span>草擬回覆民眾陳情的函稿</li>
-                                <li><span class="font-semibold text-gray-800">【實作】</span>快速整理會議紀錄</li>
+                                <li><span class="font-semibold text-gray-800">【實作】</span>快速整理會議紀錄與待辦事項</li>
                             </ul>
                         </div>
-                        <div>
-                            <p class="text-sm font-semibold text-blue-500">14:20 - 14:30</p>
-                            <h4 class="font-bold text-lg mt-1">休息時間</h4>
-                        </div>
-                        <div>
+                        <div class="border-t border-gray-200 pt-8">
                             <p class="text-sm font-semibold text-blue-500">14:30 - 15:40</p>
                             <h4 class="font-bold text-lg mt-1">單元五：多媒體與視覺化內容生成</h4>
-                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-1">
-                                <li>應用場景：簡報設計、社群貼文</li>
+                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-2">
+                                <li>AI生圖工具介紹與提示詞要點</li>
                                 <li><span class="font-semibold text-gray-800">【實作】</span>為粉絲專頁生成宣傳圖</li>
-                                <li><span class="font-semibold text-gray-800">【實作】</span>將複雜流程轉換為易懂步驟</li>
+                                <li><span class="font-semibold text-gray-800">【實作】</span>將複雜流程轉換為易懂圖文</li>
                             </ul>
                         </div>
-                        <div>
+                         <div class="border-t border-gray-200 pt-8">
                             <p class="text-sm font-semibold text-blue-500">15:40 - 16:00</p>
                             <h4 class="font-bold text-lg mt-1">單元六：總結－AI協作的未來與Q&A</h4>
-                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-1">
-                                <li>課程重點回顧</li>
+                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-2">
+                                <li>重點回顧與未來展望</li>
                                 <li>倫理與資安提醒</li>
                                 <li>綜合問答與交流</li>
                             </ul>
@@ -199,36 +175,26 @@
             </div>
         </section>
 
-        <section id="skills" class="mt-20 scroll-mt-20">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900">核心技能分佈</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">本課程著重於實務操作，下圖呈現各項核心技能的教學時間佔比，助您掌握最關鍵的AI應用能力。</p>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 border border-gray-100 flex flex-col lg:flex-row items-center gap-8">
-                <div class="w-full lg:w-1/2">
-                    <div class="chart-container">
-                        <canvas id="skillsChart"></canvas>
-                    </div>
+        <section id="skills" class="mt-20">
+            <h2 class="text-3xl font-bold text-center text-gray-900">核心技能分布</h2>
+            <div class="mt-8 grid md:grid-cols-2 gap-12 items-center">
+                <div class="chart-container">
+                    <canvas id="skillsChart"></canvas>
                 </div>
-                <div class="w-full lg:w-1/2">
-                    <h3 id="skill-title" class="text-xl font-bold text-gray-800 text-center lg:text-left">將滑鼠移至圖表上查看說明</h3>
-                    <p id="skill-description" class="mt-2 text-gray-600 text-center lg:text-left min-h-[100px]"></p>
+                <div class="text-left">
+                    <h3 id="skill-title" class="text-2xl font-bold text-gray-800">將滑鼠移至圖表上查看說明</h3>
+                    <p id="skill-description" class="mt-4 text-gray-600"></p>
                 </div>
             </div>
         </section>
         
-        <section id="info" class="mt-20 scroll-mt-20">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900">講師資訊</h2>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100 max-w-2xl mx-auto">
-                 <div class="flex flex-col sm:flex-row items-center gap-6">
-                    <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center text-gray-400">
-                        <span class="text-sm">講師照片</span>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-800">潘競恒</h3>
-                        <p class="text-gray-600 mt-1">國立中興大學國家政策與公共事務研究所</p>
+        <section id="instructor" class="mt-20">
+            <h2 class="text-3xl font-bold text-center text-gray-900">講師資訊</h2>
+            <div class="mt-8 max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-gray-800">AI應用顧問</h3>
+                    <p class="mt-2 text-lg text-blue-600 font-semibold">生成式AI百場授課講師</p>
+                    <div class="mt-4 border-t pt-4">
                         <p class="mt-2 text-sm text-gray-600">受聘考試院國家文官學院基礎訓練與升等訓練講師，講授課程為「生成式AI實作」、「智慧政府與數位服務」。在政府數位轉型與生成式AI導入工作情境的培訓具多年實務經驗，致力於幫助公務機關與企業，透過AI提升組織效能。</p>
                     </div>
                  </div>
@@ -236,6 +202,35 @@
         </section>
     </main>
     
+    <div id="modalUnit1A" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
+        <div class="modal-content bg-white rounded-lg shadow-xl w-11/12 max-w-2xl max-h-[80vh] flex flex-col transform scale-95">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="text-lg font-semibold">展演A素材：雜亂逐字稿</h3>
+                <button onclick="closeModal('modalUnit1A')" class="text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto text-sm whitespace-pre-wrap">
+好的，大家，我們今天主要是要討論一下青年就業輔導計畫的宣傳策略。嗯...那個...小組長，你先說一下目前進度吧。喔對了，明天中午的便當記得幫我訂排骨的，謝謝。好，回到正題，小組長你請說。好的，目前規劃是下個月15號在台中軟體園區辦一場實體博覽會，然後...我覺得臉書的觸及好像有點下降，是不是可以考慮用IG Reels做一些短影音？這點子不錯，年輕人應該比較喜歡看這個，這個部分請志明去研究一下可行性，下週三前給我一個簡單的報告。好，那博覽會的合作廠商呢？目前我們已經聯繫了15家廠商，但還需要更多高科技產業的加入，這部分可能要請文雄哥動用一下人脈了，月底前希望可以增加到30家。喔，還有，這次宣傳總預算是5萬元，目前已經花了1萬5千元在初步的社群廣告上。另外，活動主視覺還沒定案，美玲，妳那邊最晚下週五要提供兩個版本讓我們票選。好，那今天會議的重點就是，確定實體博覽會的時間地點，並分派了短影音研究、廠商邀約和主視覺設計的任務。大家還有問題嗎？沒有的話就先這樣。
+            </div>
+        </div>
+    </div>
+
+    <div id="modalUnit1B" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
+        <div class="modal-content bg-white rounded-lg shadow-xl w-11/12 max-w-2xl max-h-[80vh] flex flex-col transform scale-95">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="text-lg font-semibold">展演B素材：計畫核心資訊</h3>
+                <button onclick="closeModal('modalUnit1B')" class="text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto text-sm whitespace-pre-wrap">
+- 計畫名稱：2025青年數位技能躍升計畫
+- 目標對象：18-29歲待業或轉職青年
+- 核心內容：提供為期三個月的免費線上課程，包含UI/UX設計、前端網頁開發、數據分析。
+- 特色：結訓後將舉辦線上媒合會，邀請多家知名企業參與。
+- 報名時間：即日起至下個月底。
+- 報名網址：www.wda-test.gov.tw
+            </div>
+        </div>
+    </div>
+
     <div id="modalA" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
         <div class="modal-content bg-white rounded-lg shadow-xl w-11/12 max-w-3xl max-h-[80vh] flex flex-col transform scale-95">
             <div class="flex justify-between items-center p-4 border-b">
@@ -263,7 +258,7 @@
                              <li>協助至少80萬名15至29歲青年就業。</li>
                              <li>青年失業率長期維持於經濟合作暨發展組織（OECD）國家平均水準以下。</li>
                              <li>參與「產業新尖兵計畫」之青年，訓後三個月就業率達90%以上。</li>
-                             <li>整體方案之參與者滿意度達95%以上。</li>
+                             <li>整體方案之參與者滿-意度達95%以上。</li>
                          </ul>
                          <p class="mt-2">為確保方案執行成效，勞動力發展署將成立專案辦公室，按季召開跨部會協調會議，並委託第三方研究機構進行年度追蹤評估，滾動式修正方案細節，以期能最大化政策效益，為我國青年打造一個更友善、更有前景的就業環境。</p>
                     </div>
@@ -315,7 +310,7 @@
     </div>
 
     <footer class="mt-20 bg-gray-800 text-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm">
+        <div class="container mx-auto px-6 py-4 text-center text-sm">
             <p>&copy; 2025 勞動力發展署中彰投分署 生成式AI實務應用工作坊</p>
         </div>
     </footer>
@@ -323,13 +318,11 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const morningTab = document.getElementById('morning-tab');
-// ... existing code ... -->
             const afternoonTab = document.getElementById('afternoon-tab');
             const morningContent = document.getElementById('morning-content');
             const afternoonContent = document.getElementById('afternoon-content');
             
             morningTab.addEventListener('click', () => {
-// ... existing code ... -->
                 morningTab.classList.add('active');
                 afternoonTab.classList.remove('active');
                 morningContent.classList.remove('hidden');
@@ -337,7 +330,6 @@
             });
 
             afternoonTab.addEventListener('click', () => {
-// ... existing code ... -->
                 afternoonTab.classList.add('active');
                 morningTab.classList.remove('active');
                 afternoonContent.classList.remove('hidden');
@@ -345,22 +337,18 @@
             });
 
             const sections = document.querySelectorAll('section');
-// ... existing code ... -->
             const navLinks = document.querySelectorAll('.nav-link');
 
             const observerOptions = {
                 root: null,
-// ... existing code ... -->
                 rootMargin: '0px',
                 threshold: 0.4
             };
 
             const observer = new IntersectionObserver((entries, observer) => {
-// ... existing code ... -->
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         navLinks.forEach(link => {
-// ... existing code ... -->
                             link.classList.remove('active');
                             if (link.getAttribute('href').substring(1) === entry.target.id) {
                                 link.classList.add('active');
@@ -371,12 +359,10 @@
             }, observerOptions);
 
             sections.forEach(section => {
-// ... existing code ... -->
                 observer.observe(section);
             });
             
             navLinks.forEach(anchor => {
-// ... existing code ... -->
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -386,7 +372,6 @@
             });
 
             const skillData = {
-// ... existing code ... -->
                 labels: [
                     '資訊彙整與文本優化',
                     '公文草擬与會議管理',
@@ -395,11 +380,9 @@
                 ],
                 datasets: [{
                     data: [30, 26.7, 23.3, 20],
-// ... existing code ... -->
                     backgroundColor: [
                         '#3B82F6',
                         '#60A5FA',
-// ... existing code ... -->
                         '#93C5FD',
                         '#BFDBFE'
                     ],
@@ -416,7 +399,6 @@
             };
             
             const skillDescriptions = {
-// ... existing code ... -->
               '提示工程': {
                 title: '提示工程 (Prompt Engineering)',
                 text: '學習與AI高效溝通的核心技巧。掌握如何下達清晰、具體的指令，引導AI生成精準、高品質的內容，這是發揮AI最大潛力的基礎。'
@@ -440,21 +422,17 @@
 
             const ctx = document.getElementById('skillsChart').getContext('2d');
             const skillsChart = new Chart(ctx, {
-// ... existing code ... -->
                 type: 'doughnut',
                 data: skillData,
                 options: {
                     responsive: true,
-// ... existing code ... -->
                     maintainAspectRatio: false,
                     cutout: '60%',
                     plugins: {
                         legend: {
-// ... existing code ... -->
                             position: 'bottom',
                             labels: {
                                 font: {
-// ... existing code ... -->
                                     size: 12,
                                     family: "'Noto Sans TC', sans-serif"
                                 },
@@ -463,11 +441,9 @@
                             }
                         },
                         tooltip: {
-// ... existing code ... -->
                             enabled: true,
                             callbacks: {
                                 label: function(context) {
-// ... existing code ... -->
                                     let label = context.label || '';
                                     if (label) {
                                         label += ': ';
