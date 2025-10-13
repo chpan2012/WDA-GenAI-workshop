@@ -43,6 +43,12 @@
             height: 40vh; 
             max-height: 450px;
         }
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        .modal-content {
+            transition: transform 0.25s ease;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -137,10 +143,16 @@
                         <div>
                             <p class="text-sm font-semibold text-blue-500">10:30 - 12:00</p>
                             <h4 class="font-bold text-lg mt-1">單元三：行政效率實戰(一):資訊彙整與文本優化</h4>
-                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-1">
+                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-2">
                                 <li>應用場景：快速消化長篇報告、法規；協助改善文稿；快速生成草案</li>
-                                <li><span class="font-semibold text-gray-800">【實作】</span>政策報告重點摘要</li>
-                                <li><span class="font-semibold text-gray-800">【實作】</span>內部公告文稿潤飾</li>
+                                <li class="flex items-center gap-x-4">
+                                    <span class="font-semibold text-gray-800">【實作】</span>政策報告重點摘要
+                                    <button onclick="openModal('modalA')" class="text-xs bg-blue-100 text-blue-700 hover:bg-blue-200 px-2 py-1 rounded-md">查看教材</button>
+                                </li>
+                                <li class="flex items-center gap-x-4">
+                                    <span class="font-semibold text-gray-800">【實作】</span>內部公告文稿潤飾
+                                    <button onclick="openModal('modalB')" class="text-xs bg-blue-100 text-blue-700 hover:bg-blue-200 px-2 py-1 rounded-md">查看教材</button>
+                                </li>
                                 <li><span class="font-semibold text-gray-800">【實作】</span>青年就業博覽會標語發想</li>
                             </ul>
                         </div>
@@ -224,6 +236,84 @@
         </section>
     </main>
     
+    <div id="modalA" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
+        <div class="modal-content bg-white rounded-lg shadow-xl w-11/12 max-w-3xl max-h-[80vh] flex flex-col transform scale-95">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="text-lg font-semibold">實作A教材：政策報告重點摘要</h3>
+                <button onclick="closeModal('modalA')" class="text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto text-sm">
+                <h4 class="font-bold mb-2">材料：投資青年就業方案第二期 (節錄)</h4>
+                <p class="text-xs text-gray-500 mb-4">來源： 勞動部勞動力發展署 (本文件為依據公開資訊虛構與改寫之教材)</p>
+                <div class="space-y-4">
+                    <p><span class="font-semibold">背景：</span> 為協助青年就業，勞動部於112年5月啟動「投資青年就業方案」，整合教育部、經濟部及國科會等11個部會資源，提供多元化服務協助青年就業。鑑於青年就業面臨之挑戰持續變化，勞動部規劃於113年至115年推動「投資青年就業方案第二期」（以下簡稱本方案），預計4年投入約320億元，協助80萬名青年就業。本方案旨在深化既有服務，並針對數位轉型、綠色經濟等新興產業趨勢，強化青年之職業技能與職場適應力。</p>
+                    <div>
+                        <h5 class="font-semibold mb-2">第一章：方案目標與策略</h5>
+                        <p>本方案之總體目標為提升青年勞動參與率，並縮短初次尋職青年之待業期間。策略上，我們將延續第一期方案之精神，從「職涯發展」、「技能提升」與「就業促進」三大面向著手，並注入新的政策工具與資源。</p>
+                        <ul class="list-disc list-inside mt-2 space-y-2 pl-4">
+                            <li><span class="font-semibold">策略一：深化職涯輔導，定向個人發展</span><br>我們觀察到，部分青年對於未來職涯規劃感到迷茫，導致尋職過程缺乏效率。為此，本方案將擴大「青年職涯發展中心」（YS）的服務量能，預計在全國增設3處服務據點。同時，將引進AI輔導系統，透過大數據分析，提供個人化的職業興趣測評與職缺推薦，協助青年在進入職場前，能有更清晰的自我認知與方向感。此系統將整合現有之「台灣就業通」資料庫，透過演算法匹配，提升媒合精準度。</li>
+                            <li><span class="font-semibold">策略二：強化技能培訓，接軌產業趨勢</span><br>面對全球供應鏈重組與產業智慧化的浪潮，特定技能之需求日益迫切。本方案將聚焦於五加二產業創新計畫及六大核心戰略產業，擴大辦理「產業新尖兵計畫」。訓練課程將涵蓋AI應用、綠能科技、半導體製程等重點領域。為鼓勵青年參訓，除全額補助訓練費用外，參訓期間將持續提供每月最高8,000元之學習獎勵金。此外，為確保訓後能順利接軌職場，將強化辦理訓後之企業媒合會，並導入「履歷智慧診斷」服務，協助青年優化其求職文件。</li>
+                            <li><span class="font-semibold">策略三：促進職場體驗，累積實務經驗</span><br>為消弭學用落差，本方案將持續推動「大專青年預聘計畫」，鼓勵企業提前預聘大四學生，並提供實習期間的薪資補助。同時，為協助非典型就業青年，將試辦「青年多元就業培力計畫」，針對有志於從事自由工作、斜槓職涯之青年，提供專案管理、數位行銷、財務規劃等系列課程，並建構一線上接案平台，提供初期案源支持。</li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h5 class="font-semibold mb-2">第二章：預期效益與評估</h5>
+                        <p>本方案預計於四年期程結束後，達成以下關鍵績效指標（KPIs）：</p>
+                         <ul class="list-decimal list-inside mt-2 space-y-1 pl-4">
+                             <li>協助至少80萬名15至29歲青年就業。</li>
+                             <li>青年失業率長期維持於經濟合作暨發展組織（OECD）國家平均水準以下。</li>
+                             <li>參與「產業新尖兵計畫」之青年，訓後三個月就業率達90%以上。</li>
+                             <li>整體方案之參與者滿意度達95%以上。</li>
+                         </ul>
+                         <p class="mt-2">為確保方案執行成效，勞動力發展署將成立專案辦公室，按季召開跨部會協調會議，並委託第三方研究機構進行年度追蹤評估，滾動式修正方案細節，以期能最大化政策效益，為我國青年打造一個更友善、更有前景的就業環境。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modalB" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
+        <div class="modal-content bg-white rounded-lg shadow-xl w-11/12 max-w-3xl max-h-[80vh] flex flex-col transform scale-95">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="text-lg font-semibold">實作B教材：內部公告文稿潤飾</h3>
+                <button onclick="closeModal('modalB')" class="text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto text-sm">
+                <h4 class="font-bold mb-2">材料：內部公告草稿</h4>
+                 <p class="text-xs text-gray-500 mb-4">主旨： 為本分署導入「數位化公文暨檔案管理整合系統」案，茲公布相關教育訓練與啟用期程，請查照。</p>
+                <div class="space-y-4 whitespace-pre-wrap">
+                    <p>鈞鑒：
+
+為恪遵數位發展部頒布之「政府機關數位轉型指導綱要」，暨為精進本分署現行行政作業流程之效能，本室業已竣事全新「數位化公文暨檔案管理整合系統」之建構與系統壓力測試。
+
+本系統之建置，旨在統合現行多軌並行之公文簽核程序與實體卷宗歸檔作業，透過單一入口平台，俾達無紙化、流程自動化與檔案數位化之鵠的。系統預計將包含線上簽核、智慧分文、逾期稽催、以及基於光學字元辨識（OCR）技術之卷宗影像掃描與全文檢索等核心功能模組。
+
+為裨益系統賡續無礙，並令全體同仁嫻熟新系統之操作介面與作業邏輯，爰訂定教育訓練與啟用期程如后：
+
+一、 第一階段教育訓練（先導使用者）：
+期日：次週之週三 (10/22) 辰時至午時 (09:00 - 12:00)
+地點：第三會議室
+對象：各單位薦派之資訊業務聯絡人（每單位正取乙名）
+
+二、 第二階段教育訓練（全體同仁）：
+期日：次次週 (10/27 - 10/31) 期間，將分梯次辦理
+地點：大禮堂
+備考：詳細梯次與報名事宜將由人事室另以電子郵件函知。
+
+三、 系統平行測試期（新舊系統並行）：
+期日：自11月3日起至11月14日止
+
+四、 新系統正式啟用日期：
+期日：11月17日
+
+請各單位於本週五（10/17）前，將第一階段教育訓練之薦派人員名單彙送本室。此案攸關本分署行政效能之宏旨，務請全體同仁戮力配合，毋負所望。
+
+資訊室 謹上</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="mt-20 bg-gray-800 text-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm">
             <p>&copy; 2025 勞動力發展署中彰投分署 生成式AI實務應用工作坊</p>
@@ -233,11 +323,13 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const morningTab = document.getElementById('morning-tab');
+// ... existing code ... -->
             const afternoonTab = document.getElementById('afternoon-tab');
             const morningContent = document.getElementById('morning-content');
             const afternoonContent = document.getElementById('afternoon-content');
             
             morningTab.addEventListener('click', () => {
+// ... existing code ... -->
                 morningTab.classList.add('active');
                 afternoonTab.classList.remove('active');
                 morningContent.classList.remove('hidden');
@@ -245,6 +337,7 @@
             });
 
             afternoonTab.addEventListener('click', () => {
+// ... existing code ... -->
                 afternoonTab.classList.add('active');
                 morningTab.classList.remove('active');
                 afternoonContent.classList.remove('hidden');
@@ -252,18 +345,22 @@
             });
 
             const sections = document.querySelectorAll('section');
+// ... existing code ... -->
             const navLinks = document.querySelectorAll('.nav-link');
 
             const observerOptions = {
                 root: null,
+// ... existing code ... -->
                 rootMargin: '0px',
                 threshold: 0.4
             };
 
             const observer = new IntersectionObserver((entries, observer) => {
+// ... existing code ... -->
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         navLinks.forEach(link => {
+// ... existing code ... -->
                             link.classList.remove('active');
                             if (link.getAttribute('href').substring(1) === entry.target.id) {
                                 link.classList.add('active');
@@ -274,10 +371,12 @@
             }, observerOptions);
 
             sections.forEach(section => {
+// ... existing code ... -->
                 observer.observe(section);
             });
             
             navLinks.forEach(anchor => {
+// ... existing code ... -->
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -287,6 +386,7 @@
             });
 
             const skillData = {
+// ... existing code ... -->
                 labels: [
                     '資訊彙整與文本優化',
                     '公文草擬与會議管理',
@@ -295,9 +395,11 @@
                 ],
                 datasets: [{
                     data: [30, 26.7, 23.3, 20],
+// ... existing code ... -->
                     backgroundColor: [
                         '#3B82F6',
                         '#60A5FA',
+// ... existing code ... -->
                         '#93C5FD',
                         '#BFDBFE'
                     ],
@@ -314,6 +416,7 @@
             };
             
             const skillDescriptions = {
+// ... existing code ... -->
               '提示工程': {
                 title: '提示工程 (Prompt Engineering)',
                 text: '學習與AI高效溝通的核心技巧。掌握如何下達清晰、具體的指令，引導AI生成精準、高品質的內容，這是發揮AI最大潛力的基礎。'
@@ -337,17 +440,21 @@
 
             const ctx = document.getElementById('skillsChart').getContext('2d');
             const skillsChart = new Chart(ctx, {
+// ... existing code ... -->
                 type: 'doughnut',
                 data: skillData,
                 options: {
                     responsive: true,
+// ... existing code ... -->
                     maintainAspectRatio: false,
                     cutout: '60%',
                     plugins: {
                         legend: {
+// ... existing code ... -->
                             position: 'bottom',
                             labels: {
                                 font: {
+// ... existing code ... -->
                                     size: 12,
                                     family: "'Noto Sans TC', sans-serif"
                                 },
@@ -356,9 +463,11 @@
                             }
                         },
                         tooltip: {
+// ... existing code ... -->
                             enabled: true,
                             callbacks: {
                                 label: function(context) {
+// ... existing code ... -->
                                     let label = context.label || '';
                                     if (label) {
                                         label += ': ';
@@ -386,8 +495,22 @@
                 }
             });
         });
+        
+        function openModal(modalID) {
+            const modal = document.getElementById(modalID);
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.querySelector('.modal-content').classList.remove('scale-95');
+        }
+
+        function closeModal(modalID) {
+            const modal = document.getElementById(modalID);
+            modal.classList.add('opacity-0');
+            modal.querySelector('.modal-content').classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('pointer-events-none');
+            }, 250);
+        }
     </script>
 </body>
 </html>
-
 
