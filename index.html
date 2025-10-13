@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成式AI實務應用工作坊(一) 互動式課程大綱</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Professional -->
+    <!-- Application Structure Plan: The SPA uses a single-page, multi-section layout with sticky navigation for easy access. The structure prioritizes user task flow over the source's linear format. It starts with a scannable 'Overview' of key details (objectives, audience). The core 'Agenda' is presented in interactive Morning/Afternoon tabs to reduce cognitive load. A 'Core Skills' section uses a doughnut chart to visually summarize the workshop's focus, making the value proposition immediately clear. This design was chosen to allow potential attendees to quickly grasp the workshop's purpose, drill into the schedule, and understand the key skills they will acquire, facilitating an informed decision to attend. -->
+    <!-- Visualization & Content Choices: 
+        - Report Info: Key workshop details (objectives, time, audience). Goal: Inform. Method: Styled HTML cards. Interaction: Static display. Justification: Provides quick, scannable access to essential information.
+        - Report Info: Detailed workshop schedule. Goal: Organize/Explore. Method: Interactive HTML Tabs for Morning/Afternoon sessions with styled content cards. Interaction: Click to switch tabs. Justification: Prevents information overload by breaking the 6-hour schedule into manageable parts.
+        - Report Info: Skills covered across modules (Prompting, Summarizing, Drafting, etc.). Goal: Compare/Synthesize. Method: Chart.js Doughnut Chart visualizing time allocation per skill. Interaction: Hover over segments to see details. Justification: Provides a high-level, quantitative summary of the workshop's practical focus, which is more engaging than a simple text list. Library/Method: Chart.js/Canvas.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #F8F7F4;
+            color: #4A4A4A;
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+        }
+        .nav-link.active {
+            color: #3B82F6;
+            border-bottom-color: #3B82F6;
+        }
+        .tab-button.active {
+            background-color: #3B82F6;
+            color: white;
+        }
+        .chart-container {
+            position: relative; 
+            width: 100%; 
+            max-width: 450px; 
+            margin-left: auto; 
+            margin-right: auto; 
+            height: 40vh; 
+            max-height: 450px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <header class="bg-blue-50 shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-gray-800">生成式AI工作坊</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#overview" class="nav-link px-3 py-2 text-sm font-medium text-gray-500 hover:text-blue-500 border-b-2 border-transparent">課程總覽</a>
+                        <a href="#agenda" class="nav-link px-3 py-2 text-sm font-medium text-gray-500 hover:text-blue-500 border-b-2 border-transparent">詳細議程</a>
+                        <a href="#skills" class="nav-link px-3 py-2 text-sm font-medium text-gray-500 hover:text-blue-500 border-b-2 border-transparent">核心技能</a>
+                        <a href="#info" class="nav-link px-3 py-2 text-sm font-medium text-gray-500 hover:text-blue-500 border-b-2 border-transparent">講師資訊</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <section id="overview" class="scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">生成式AI實務應用工作坊 (一)</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">專為公務應用設計，旨在提升您的個人行政效能，一天掌握AI協作的關鍵技巧。</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="font-bold text-lg text-blue-600 mb-2">課程目標</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+                        <li>建立生成式AI的正確觀念</li>
+                        <li>掌握「提示工程」核心技巧</li>
+                        <li>熟練運用AI工具輔助行政工作</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="font-bold text-lg text-blue-600 mb-2">課程對象</h3>
+                    <p class="text-gray-700 text-sm">勞動力發展署中彰投分署 員工</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="font-bold text-lg text-blue-600 mb-2">課程時間</h3>
+                    <p class="text-gray-700 text-sm">上午 09:00 - 12:00<br>下午 13:00 - 16:00</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="font-bold text-lg text-blue-600 mb-2">學員準備</h3>
+                    <p class="text-gray-700 text-sm">請自備筆電，並預先註冊 ChatGPT、Gemini、Claude 或 Microsoft Copilot 帳號。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="agenda" class="mt-20 scroll-mt-20">
+             <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900">課程詳細議程</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">本工作坊結合觀念建立與實作練習，確保學員能將所學應用於日常公務情境中。</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 border border-gray-100">
+                <div class="flex justify-center mb-6">
+                    <div class="inline-flex rounded-lg bg-gray-100 p-1">
+                        <button id="morning-tab" class="tab-button active px-6 py-2 text-sm font-medium rounded-md transition-colors">上午場</button>
+                        <button id="afternoon-tab" class="tab-button px-6 py-2 text-sm font-medium rounded-md transition-colors">下午場</button>
+                    </div>
+                </div>
+
+                <div id="morning-content">
+                    <h3 class="text-xl font-bold text-center text-blue-600 mb-6">觀念建立與核心技巧實作</h3>
+                    <div class="px-4 sm:px-6 lg:px-8 space-y-8">
+                        <div>
+                            <p class="text-sm font-semibold text-blue-500">09:00 - 09:20</p>
+                            <h4 class="font-bold text-lg mt-1">單元一：啟程－AI時代的行政新風貌</h4>
+                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li>課程介紹與暖身活動</li>
+                                <li>生成式AI是什麼？與傳統AI的差異</li>
+                                <li>主流AI工具介紹與比較</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-blue-500">09:20 - 10:20</p>
+                            <h4 class="font-bold text-lg mt-1">單元二：基礎核心－與AI高效溝通的藝術「提示工程」(Prompt Engineering)</h4>
+                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li>核心觀念：提示詞品質決定產出品質</li>
+                                <li>四大要素：角色、任務、背景、格式</li>
+                                <li><span class="font-semibold text-gray-800">【實作】</span>優化一份活動通知信</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-blue-500">10:20 - 10:30</p>
+                            <h4 class="font-bold text-lg mt-1">休息時間</h4>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-blue-500">10:30 - 12:00</p>
+                            <h4 class="font-bold text-lg mt-1">單元三：行政效率實戰(一):資訊彙整與文本優化</h4>
+                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li>應用場景：快速消化長篇報告、法規；協助改善文稿；快速生成草案</li>
+                                <li><span class="font-semibold text-gray-800">【實作】</span>政策報告重點摘要</li>
+                                <li><span class="font-semibold text-gray-800">【實作】</span>內部公告文稿潤飾</li>
+                                <li><span class="font-semibold text-gray-800">【實作】</span>青年就業博覽會標語發想</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="afternoon-content" class="hidden">
+                    <h3 class="text-xl font-bold text-center text-blue-600 mb-6">公務情境深度應用</h3>
+                    <div class="px-4 sm:px-6 lg:px-8 space-y-8">
+                        <div>
+                            <p class="text-sm font-semibold text-blue-500">13:00 - 14:20</p>
+                            <h4 class="font-bold text-lg mt-1">單元四：公務應用實戰(二)：公文草擬與會議管理</h4>
+                             <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li>核心應用：輔助撰寫「函」、「簽」等公文草稿</li>
+                                <li>注意事項：查證責任與機密資訊保護</li>
+                                <li><span class="font-semibold text-gray-800">【實作】</span>草擬回覆民眾陳情的函稿</li>
+                                <li><span class="font-semibold text-gray-800">【實作】</span>快速整理會議紀錄</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-blue-500">14:20 - 14:30</p>
+                            <h4 class="font-bold text-lg mt-1">休息時間</h4>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-blue-500">14:30 - 15:40</p>
+                            <h4 class="font-bold text-lg mt-1">單元五：多媒體與視覺化內容生成</h4>
+                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li>應用場景：簡報設計、社群貼文</li>
+                                <li><span class="font-semibold text-gray-800">【實作】</span>為粉絲專頁生成宣傳圖</li>
+                                <li><span class="font-semibold text-gray-800">【實作】</span>將複雜流程轉換為易懂步驟</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-blue-500">15:40 - 16:00</p>
+                            <h4 class="font-bold text-lg mt-1">單元六：總結－AI協作的未來與Q&A</h4>
+                            <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li>課程重點回顧</li>
+                                <li>倫理與資安提醒</li>
+                                <li>綜合問答與交流</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="mt-20 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900">核心技能分佈</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">本課程著重於實務操作，下圖呈現各項核心技能的教學時間佔比，助您掌握最關鍵的AI應用能力。</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 border border-gray-100 flex flex-col lg:flex-row items-center gap-8">
+                <div class="w-full lg:w-1/2">
+                    <div class="chart-container">
+                        <canvas id="skillsChart"></canvas>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <h3 id="skill-title" class="text-xl font-bold text-gray-800 text-center lg:text-left">將滑鼠移至圖表上查看說明</h3>
+                    <p id="skill-description" class="mt-2 text-gray-600 text-center lg:text-left min-h-[100px]"></p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="info" class="mt-20 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900">講師資訊</h2>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100 max-w-2xl mx-auto">
+                 <div class="flex flex-col sm:flex-row items-center gap-6">
+                    <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center text-gray-400">
+                        <span class="text-sm">講師照片</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">潘競恒</h3>
+                        <p class="text-gray-600 mt-1">國立中興大學國家政策與公共事務研究所</p>
+                        <p class="mt-2 text-sm text-gray-600">受聘考試院國家文官學院基礎訓練與升等訓練講師，講授課程為「生成式AI實作」、「智慧政府與數位服務」。在政府數位轉型與生成式AI導入工作情境的培訓具多年實務經驗，致力於幫助公務機關與企業，透過AI提升組織效能。</p>
+                    </div>
+                 </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="mt-20 bg-gray-800 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm">
+            <p>&copy; 2025 勞動力發展署中彰投分署 生成式AI實務應用工作坊</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const morningTab = document.getElementById('morning-tab');
+            const afternoonTab = document.getElementById('afternoon-tab');
+            const morningContent = document.getElementById('morning-content');
+            const afternoonContent = document.getElementById('afternoon-content');
+            
+            morningTab.addEventListener('click', () => {
+                morningTab.classList.add('active');
+                afternoonTab.classList.remove('active');
+                morningContent.classList.remove('hidden');
+                afternoonContent.classList.add('hidden');
+            });
+
+            afternoonTab.addEventListener('click', () => {
+                afternoonTab.classList.add('active');
+                morningTab.classList.remove('active');
+                afternoonContent.classList.remove('hidden');
+                morningContent.classList.add('hidden');
+            });
+
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.4
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            navLinks.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            const skillData = {
+                labels: [
+                    '資訊彙整與文本優化',
+                    '公文草擬与會議管理',
+                    '多媒體與視覺化',
+                    '提示工程',
+                ],
+                datasets: [{
+                    data: [30, 26.7, 23.3, 20],
+                    backgroundColor: [
+                        '#3B82F6',
+                        '#60A5FA',
+                        '#93C5FD',
+                        '#BFDBFE'
+                    ],
+                    hoverBackgroundColor: [
+                        '#2563EB',
+                        '#3B82F6',
+                        '#60A5FA',
+                        '#93C5FD'
+                    ],
+                    borderColor: '#F8F7F4',
+                    borderWidth: 4,
+                    hoverOffset: 8
+                }]
+            };
+            
+            const skillDescriptions = {
+              '提示工程': {
+                title: '提示工程 (Prompt Engineering)',
+                text: '學習與AI高效溝通的核心技巧。掌握如何下達清晰、具體的指令，引導AI生成精準、高品質的內容，這是發揮AI最大潛力的基礎。'
+              },
+              '資訊彙整與文本優化': {
+                title: '資訊彙整與文本優化',
+                text: '應用AI快速閱讀、消化長篇報告與法規，自動生成摘要與重點。並學習利用AI潤飾文稿、調整語氣，以及進行創意發想，大幅提升文書處理效率。'
+              },
+              '公文草擬与會議管理': {
+                title: '公文草擬與會議管理',
+                text: '專為公務場景設計，學習運用AI輔助撰寫公文草稿，並掌握會議錄音轉文字、自動生成會議紀錄等技巧，有效簡化繁瑣的行政流程。'
+              },
+              '多媒體與視覺化': {
+                title: '多媒體與視覺化內容生成',
+                text: '探索AI在視覺內容創作上的應用，包括為社群媒體、簡報生成配圖，以及將複雜的資訊與流程轉化為易於理解的視覺化說明。'
+              }
+            };
+            
+            const skillTitleEl = document.getElementById('skill-title');
+            const skillDescriptionEl = document.getElementById('skill-description');
+
+            const ctx = document.getElementById('skillsChart').getContext('2d');
+            const skillsChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: skillData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    size: 12,
+                                    family: "'Noto Sans TC', sans-serif"
+                                },
+                                boxWidth: 15,
+                                padding: 20,
+                            }
+                        },
+                        tooltip: {
+                            enabled: true,
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed.toFixed(1) + '%';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    onHover: (event, chartElement) => {
+                        if (chartElement.length) {
+                            const index = chartElement[0].index;
+                            const label = skillData.labels[index];
+                            const skillInfo = skillDescriptions[label];
+                            skillTitleEl.textContent = skillInfo.title;
+                            skillDescriptionEl.textContent = skillInfo.text;
+                        } else {
+                            skillTitleEl.textContent = '將滑鼠移至圖表上查看說明';
+                            skillDescriptionEl.textContent = '';
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
