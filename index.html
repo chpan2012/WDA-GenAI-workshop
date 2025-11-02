@@ -161,7 +161,7 @@
                                 </li>
                                 <li class="flex items-center gap-x-4">
                                     <span class="font-semibold text-gray-800">【實作E2】</span>會議錄音檔轉逐字稿
-                                    <a href="https://drive.google.com/file/d/1HFvW0-INF6rYbF4HIhGGBoIHwLGuXDnb/view?usp=drive_link" target="_blank" class="text-xs bg-blue-100 text-blue-700 hover:bg-blue-200 px-2 py-1 rounded-md">查看教材</a>
+                                    <button onclick="openModal('modalE2')" class="text-xs bg-blue-100 text-blue-700 hover:bg-blue-200 px-2 py-1 rounded-md">查看教材</button>
                                 </li>
                             </ul>
                         </div>
@@ -186,7 +186,7 @@
                             <ul class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-2">
                                 <li class="flex items-center gap-x-4">
                                     重點回顧與未來展望
-                                    <a href="https://drive.google.com/file/d/1EhQiP_dOEL-S0ycEKYNP1T57v_djXRQ1/view?usp=drive_link" target="_blank" class="text-xs bg-blue-100 text-blue-700 hover:bg-blue-200 px-2 py-1 rounded-md">更多習作教材</a>
+                                    <button onclick="openModal('modalUnit6')" class="text-xs bg-blue-100 text-blue-700 hover:bg-blue-200 px-2 py-1 rounded-md">更多習作教材</button>
                                 </li>
                                 <li>倫理與資安提醒</li>
                                 <li>綜合問答與交流</li>
@@ -269,7 +269,7 @@
                     <p><span class="font-semibold">背景：</span> 為協助青年就業，勞動部於112年5月啟動「投資青年就業方案」，整合教育部、經濟部及國科會等11個部會資源，提供多元化服務協助青年就業。鑑於青年就業面臨之挑戰持續變化，勞動部規劃於113年至115年推動「投資青年就業方案第二期」（以下G稱本方案），預計4年投入約320億元，協助80萬名青年就業。本方案旨在深化既有服務，並針對數位轉型、綠色經濟等新興產業趨勢，強化青年之職業技能與職場適應力。</p>
                     <div>
                         <h5 class="font-semibold mb-2">第一章：方案目標與策略</h5>
-                        <p>本方案之總體目標為提升青年勞動參與率，並縮短初次尋職青年之待業期間。策略上，我們將延續第一期方案之精神，從「職涯發展」、「技能提升」與「就業促進」三大面向著手，並注入新的政策工具與資源。我們觀察到，部分青年對於未來職涯規劃感到迷茫，導致尋職過程缺乏效率，為此，本方案將擴大「青年職涯發展中心」（YS）的服務量能，預計在全國增設3處服務據點，同時引進AI輔導系統，透過大數據分析，提供個人化的職業興趣測評與職缺推薦，協助青年在進入職場前，能有更清晰的自我認知與方向感，此系統將整合現有之「台灣就業通」資料庫，透過演算法匹配，提升媒合精準度。面對全球供應鏈重組與產業智慧化的浪潮，特定技能之需求日益迫切，本方案將聚焦於五加二產業創新計畫及六大核心戰-略產業，擴大辦理「產業新尖兵計畫」，訓練課程將涵蓋AI應用、綠能科技、半V導體製程等重點領域，為鼓勵青年參訓，除全額補助訓練費用外，參訓期間將持續提供每月最高8,000元之學習獎勵金，並強化辦理訓後之企業媒合會與導入「履歷智慧診斷」服務。此外，為消弭學用落差，本方案將持續推動「大專青年預聘計畫」，鼓勵企業提前預聘大四學生，並提供實習期間的薪資補助，同時試辦「青年多元就業培力計畫」，針對有志於從事自由工作、斜槓職涯之青年，提供專案管理、數位行銷、財務規劃等系列課程，並建構一線上接案平台，提供初期案源支持。</p>
+                        <p>本方案之總體目標為提升青年勞動參與率，並縮短初次尋職青年之待業期間。策略上，我們將延續第一期方案之精神，從「職涯發展」、「技能提升」與「就業促進」三大面向著手，並注入新的政策工具與資源。我們觀察到，部分青年對於未來職涯規劃感到迷茫，導致尋職過程缺乏效率，為此，本方案將擴大「青年職涯發展中心」（YS）的服務量能，預計在全國增設3處服務據點，同時引進AI輔導系統，透過大數據分析，提供個人化的職業興趣測評與職缺推薦，協助青年在進入職場前，能有更清晰的自我認知與方向感，此系統將整合現有之「台灣就業通」資料庫，透過演算法匹配，提升媒合精準度。面對全球供應鏈重組與產業智慧化的浪潮，特定技能之需求日益P切，本方案將聚焦於五加二產業創新計畫及六大核心戰-略產業，擴大辦理「產業新尖兵計畫」，訓練課程將涵蓋AI應用、綠能科技、半V導體製程等重點領域，為鼓勵青年參訓，除全額補助訓練費用外，參訓期間將持續提供每月最高8,000元之學習獎勵金，並強化辦理訓後之企業媒合會與導入「履歷智慧診斷」服務。此外，為消弭學用落差，本方案將持續推動「大專青年預聘計畫」，鼓勵企業提前預聘大四學生，並提供實習期間的薪資補助，同時試辦「青年多元就業培力計畫」，針對有志於從事自由工作、斜槓職涯之青年，提供專案管理、數位行銷、財務規劃等系列課程，並建構一線上接案平台，提供初期案源支持。</p>
                     </div>
                      <div>
                         <h5 class="font-semibold mb-2">第二章：預期效益與評估</h5>
@@ -351,10 +351,23 @@
             </div>
         </div>
     </div>
+    
+    <!-- Modal E2 -->
+    <div id="modalE2" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
+        <div class="modal-content bg-white rounded-lg shadow-xl w-11/12 max-w-4xl h-[80vh] flex flex-col transform scale-95">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="text-lg font-semibold">實作E2教材：會議錄音檔</h3>
+                <button onclick="closeModal('modalE2')" class="text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto flex-grow">
+                <iframe src="https://drive.google.com/file/d/1HFvW0-INF6rYbF4HIhGGBoIHwLGuXDnb/preview" class="w-full h-full border-0"></iframe>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal F -->
     <div id="modalF" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
-        <div class="modal-content bg-white rounded-lg shadow-xl w-11/12 max-w-2xl max-h-[80vh] flex flex-col transform scale-95">
+        <div class="modal-content bg-white rounded-lg shadow-xl w-11/1Rows max-w-2xl max-h-[80vh] flex flex-col transform scale-95">
             <div class="flex justify-between items-center p-4 border-b">
                 <h3 class="text-lg font-semibold">實作F提示：AI生圖四大要素</h3>
                 <button onclick="closeModal('modalF')" class="text-gray-500 hover:text-gray-800">&times;</button>
@@ -392,6 +405,928 @@
 
 <h4 class="font-bold mt-4 mb-2 border-t pt-4">提示詞範例</h4>
 「請將這段申請流程，改寫成一份給初次申請民眾看的懶人包，用條列式、口語化的方式，一步步說明申請流程。請幫這份懶人包加上一個親切的開頭與結尾。」
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Unit 6 -->
+    <div id="modalUnit6" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
+        <div class="modal-content bg-white rounded-lg shadow-xl w-11/12 max-w-4xl h-[80vh] flex flex-col transform scale-95">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="text-lg font-semibold">單元六：更多習作教材</h3>
+                <button onclick="closeModal('modalUnit6')" class="text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto flex-grow">
+                <iframe srcdoc="<!DOCTYPE html>
+<html lang=&quot;zh-Hant&quot;>
+<head>
+    <meta charset=&quot;UTF-8&quot;>
+    <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+    <title>課程教材總覽 | 生成式AI賦能</title>
+    <script src=&quot;https://cdn.tailwindcss.com&quot;></script>
+    <link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>
+    <link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
+    <link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap&quot; rel=&quot;stylesheet&quot;>
+    <style>
+        body {
+            font-family: 'Noto Sans TC', 'Inter', sans-serif;
+            line-height: 1.7;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Noto Sans TC', 'Inter', sans-serif;
+            line-height: 1.3;
+        }
+        
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 4px solid #3b82f6;
+        }
+        
+        .intro-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .practice-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 1rem;
+            padding: 0.75rem 1rem;
+            background: linear-gradient(to right, #dbeafe, transparent);
+            border-left: 5px solid #3b82f6;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .example-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #059669;
+            margin-bottom: 1.5rem;
+            padding: 0.75rem 1rem;
+            background: linear-gradient(to right, #d1fae5, transparent);
+            border-left: 5px solid #10b981;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #374151;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            padding-left: 0.75rem;
+            border-left: 3px solid #9ca3af;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .badge-beginner {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .badge-intermediate {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        
+        .badge-time {
+            background: #f3f4f6;
+            color: #4b5563;
+        }
+        
+        .alert-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .tip-box {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .success-box {
+            background: #f0fdf4;
+            border-left: 4px solid #10b981;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        pre.prompt-code {
+            background: #f0f9ff;
+            color: #1e3a8a;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 2px solid #bfdbfe;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+        
+        pre.practice-transcript {
+            background: #f3f4f6;
+            color: #1f2937;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 2px solid #d1d5db;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+        
+        .content-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 2.5rem;
+        }
+        
+        .content-card ul, .content-card ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .content-card li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .divider {
+            margin: 3rem 0;
+            border: 0;
+            border-top: 2px solid #e5e7eb;
+        }
+        
+        .content-card p {
+            margin-bottom: 1rem;
+        }
+        
+        .content-card strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: start;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .info-table th {
+            background: #f3f4f6;
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid #d1d5db;
+        }
+        
+        .info-table td {
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+        }
+        
+        .challenge-box {
+            background: #fefce8;
+            border: 2px dashed #facc15;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+<body class=&quot;bg-gray-50&quot;>
+
+    <main class=&quot;container mx-auto px-6 py-12 max-w-5xl&quot;>
+
+        <h1 class=&quot;main-title text-center&quot;>生成式AI應用：實作教材</h1>
+
+        <!-- 課程導引 -->
+        <div class=&quot;intro-box&quot;>
+            <h2 class=&quot;text-2xl font-bold mb-4&quot;>📚 課程目標</h2>
+            <p class=&quot;mb-4&quot;>透過四個實務情境，學習如何運用生成式AI工具（ChatGPT、Gemini、Copilot、Claude等）提升公務工作效率。完成本課程後，您將能夠：</p>
+            <ul class=&quot;list-disc list-inside space-y-2 mb-4&quot;>
+                <li>快速將會議錄音轉化為結構化記錄</li>
+                <li>利用AI協助撰寫符合格式的公文</li>
+                <li>運用AI進行政策議題的初步分析</li>
+                <li>產出專業的新聞稿與宣傳文案</li>
+            </ul>
+            <div class=&quot;bg-white bg-opacity-20 p-3 rounded&quot;>
+                <strong>💡 使用說明：</strong>每個實作包含情境說明、逐步引導、範例提示詞及反思練習。建議依序完成，每個實作約需 20-30 分鐘。
+            </div>
+        </div>
+
+        <section>
+
+            <!-- 實作一 -->
+            <div class=&quot;content-card&quot;>
+                <div class=&quot;flex items-center justify-between mb-4&quot;>
+                    <h2 class=&quot;practice-title mb-0&quot;>
+                        📝 實作一：會議記錄快手
+                    </h2>
+                    <div class=&quot;flex gap-2&quot;>
+                        <span class=&quot;badge badge-beginner&quot;>⭐ 基礎</span>
+                        <span class=&quot;badge badge-time&quot;>⏱️ 20分鐘</span>
+                    </div>
+                </div>
+                
+                <h3 class=&quot;section-subtitle&quot;>📋 背景資料</h3>
+                <p>你剛參加完「推動企業內部員工數位技能提升補助計畫」的第一次籌備會議，以下是由錄音軟體轉譯的會議逐字稿（內容經過簡化與匿名處理）：</p>
+                <pre class=&quot;practice-transcript&quot;>主持人(王科長)：好，今天大家來開會，主要是要討論那個...就是員工數位技能提升的那個補助計畫，我們上次有跟署長報過，現在要來訂一些細節。
+小李：科長，我覺得申請流程要盡量簡化，不然企業會覺得很麻煩，就不想申請了。
+陳姐：同意，特別是中小企業，他們沒有那麼多行政人力來搞這些文件。或許我們可以做一個線上申請系統？
+張專員：線上系統是個好主意，但這需要資訊室的幫忙，而且可能要編列一筆新的預算，今年來的及嗎？
+王科長：預算問題我來想辦法跟主計那邊喬。小李，那你先去研究一下其他部會類似的補助案，看他們的申請流程是怎樣，下週二前給我一個比較表。陳姐，妳先草擬一下補助的適用對象跟補助項目，我們要有個範圍，比如是不是所有產業都適用？是不是只補助AI或大數據相關課程？這個也麻煩下週二前給我。資訊系統的事，我會後會親自去找資訊室主任談。好，今天先這樣，散會。</pre>
+
+                <h3 class=&quot;section-subtitle&quot;>🎯 學習目標</h3>
+                <p>學會使用AI將口語化的會議逐字稿，轉換成結構清晰的正式會議記錄。</p>
+
+                <h3 class=&quot;section-subtitle&quot;>📝 操作步驟</h3>
+                <ol>
+                    <li><strong>步驟 1：</strong> 開啟你的AI工具（ChatGPT、Gemini、Copilot等）。</li>
+                    <li><strong>步驟 2：</strong> 複製下方的<strong>【會議記錄】</strong>提示詞範本。</li>
+                    <li><strong>步驟 3：</strong> 將上方的會議逐字稿貼入提示詞的指定位置。</li>
+                    <li><strong>步驟 4：</strong> 送出指令，檢視AI生成的會議記錄。</li>
+                    <li><strong>步驟 5：</strong> 檢查產出內容是否包含：會議主題、與會人員、核心結論、決議事項、待辦事項表格。</li>
+                </ol>
+
+                <div class=&quot;challenge-box&quot;>
+                    <h4 class=&quot;font-bold text-lg mb-2&quot;>🎯 進階挑戰（選做）</h4>
+                    <p class=&quot;mb-2&quot;><strong>挑戰 1：</strong> 請AI將待辦事項的截止日期，從「下週二」轉換成具體日期（假設今天是11月3日，星期一）。</p>
+                    <p><strong>挑戰 2：</strong> 請AI額外生成一份「一頁式會議摘要」，控制在200字以內，適合呈報給長官快速瀏覽。</p>
+                </div>
+
+                <div class=&quot;alert-box&quot;>
+                    <h4 class=&quot;font-bold mb-2&quot;>⚠️ 常見陷阱</h4>
+                    <ul class=&quot;list-disc list-inside space-y-1&quot;>
+                        <li><strong>逐字稿太長：</strong> AI可能遺漏細節 → 可先請AI分段摘要，再整合</li>
+                        <li><strong>待辦事項不明確：</strong> 若逐字稿中責任歸屬模糊，要在Prompt中明確要求「若無明確負責人，請標註『待指派』」</li>
+                        <li><strong>時間資訊遺失：</strong> 記得在Prompt中說明「今天的日期」，讓AI能正確計算相對時間</li>
+                    </ul>
+                </div>
+
+                <h3 class=&quot;section-subtitle&quot;>🤝 同儕互評（3分鐘）</h3>
+                <ul class=&quot;list-disc list-inside space-y-2&quot;>
+                    <li>與鄰座夥伴交換你們生成的會議記錄</li>
+                    <li>互相檢視：AI是否遺漏了重要資訊？格式是否清晰易讀？</li>
+                    <li>討論：對方的Prompt有哪些值得學習的細節？</li>
+                    <li>角色扮演：如果你是王科長，這份記錄能讓你快速回憶會議內容嗎？</li>
+                </ul>
+
+                <h3 class=&quot;section-subtitle&quot;>💭 個人應用反思（2分鐘）</h3>
+                <div class=&quot;tip-box&quot;>
+                    <p class=&quot;font-bold mb-2&quot;>請在筆記本上完成以下填空：</p>
+                    <ul class=&quot;space-y-2&quot;>
+                        <li>✏️ 我最常參加的會議是：<span class=&quot;text-gray-400&quot;>___________________</span></li>
+                        <li>✏️ 這類會議記錄的特殊需求是：<span class=&quot;text-gray-400&quot;>___________________</span></li>
+                        <li>✏️ 我需要在範本中調整的部分：<span class=&quot;text-gray-400&quot;>___________________</span></li>
+                        <li>✏️ 明天我就可以用這個技巧來：<span class=&quot;text-gray-400&quot;>___________________</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 範例一 -->
+            <div class=&quot;content-card&quot;>
+                <h2 class=&quot;example-title mb-0&quot;>💡 範例提示詞：會議記錄</h2>
+                
+                <div class=&quot;success-box my-4&quot;>
+                    <p class=&quot;font-bold mb-2&quot;>✅ Prompt 設計重點檢查清單</p>
+                    <div class=&quot;space-y-1&quot;>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>有明確的角色設定（你是誰）</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>目標具體清楚（要產出什麼）</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>提供完整的輸入資料（逐字稿）</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>說明輸出格式與結構</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>定義語氣風格</span></div>
+                    </div>
+                </div>
+
+<pre class=&quot;prompt-code&quot;><code># 角色
+你是一位專業的會議記錄員。
+
+# 目標
+請根據下方的會議逐字稿，產出一份結構化的會議記錄。
+
+# 流程
+1. 寫出會議基本資訊（主題、時間、與會人員）。
+2. 摘要本次會議的3個核心結論。
+3. 條列出所有的決議事項。
+4. 整理出所有的待辦事項，並標明負責人與預計完成時間，以表格呈現。
+
+# 風格
+清晰、條理分明、精簡扼要。
+
+# 逐字稿
+[請在此貼上會議逐字稿]
+
+# 補充資訊（選填）
+今天日期：【例如：2025年11月3日（星期一）】
+特殊需求：【例如：需要特別標註預算相關事項】</code></pre>
+
+                <div class=&quot;tip-box mt-4&quot;>
+                    <p class=&quot;font-bold mb-2&quot;>💡 進階技巧</p>
+                    <p><strong>如何讓AI的語氣更正式？</strong> 在「風格」欄位中加入：「使用正式公文用語，避免口語化表達」</p>
+                    <p class=&quot;mt-2&quot;><strong>如何處理多場會議？</strong> 建立一個專屬的Prompt範本文件，每次只需替換逐字稿即可</p>
+                </div>
+            </div>
+
+            <hr class=&quot;divider&quot;>
+
+            <!-- 實作二 -->
+            <div class=&quot;content-card&quot;>
+                <div class=&quot;flex items-center justify-between mb-4&quot;>
+                    <h2 class=&quot;practice-title mb-0&quot;>
+                        📄 實作二：公文撰寫馬拉松
+                    </h2>
+                    <div class=&quot;flex gap-2&quot;>
+                        <span class=&quot;badge badge-beginner&quot;>⭐ 基礎</span>
+                        <span class=&quot;badge badge-time&quot;>⏱️ 25分鐘</span>
+                    </div>
+                </div>
+
+                <h3 class=&quot;section-subtitle&quot;>📋 背景情境</h3>
+                <p>你是「就業服務組」的承辦人。近日，臺中市勞工局來函，詢問本署目前是否有針對「因應AI技術發展，協助非自願離職勞工轉職」的專案計畫或訓練課程資源。</p>
+                <p>經查，本署的「AI與大數據應用人才培訓班」正符合此需求。</p>
+                <p class=&quot;font-bold text-lg&quot;>📮 你的任務：回覆一封公文（函），告知對方相關資訊。</p>
+
+                <h3 class=&quot;section-subtitle&quot;>📊 關鍵資訊要點</h3>
+                <table class=&quot;info-table&quot;>
+                    <tr>
+                        <th style=&quot;width: 30%;&quot;>項目</th>
+                        <th>內容</th>
+                    </tr>
+                    <tr>
+                        <td><strong>培訓班名稱</strong></td>
+                        <td>AI與大數據應用人才培訓班</td>
+                    </tr>
+                    <tr>
+                        <td><strong>訓練期間</strong></td>
+                        <td>3個月，全日制</td>
+                    </tr>
+                    <tr>
+                        <td><strong>課程內容</strong></td>
+                        <td>Python基礎、數據分析、機器學習入門</td>
+                    </tr>
+                    <tr>
+                        <td><strong>報名資格</strong></td>
+                        <td>大專以上學歷 + 持有「非自願離職證明」</td>
+                    </tr>
+                    <tr>
+                        <td><strong>報名方式</strong></td>
+                        <td>至本署「台灣就業通」網站線上報名</td>
+                    </tr>
+                    <tr>
+                        <td><strong>開課日期</strong></td>
+                        <td>2025年11月3日</td>
+                    </tr>
+                    <tr>
+                        <td><strong>期望對方協助</strong></td>
+                        <td>轉知轄下就業服務站，鼓勵符合資格民眾報名</td>
+                    </tr>
+                </table>
+
+                <h3 class=&quot;section-subtitle&quot;>🎯 學習目標</h3>
+                <p>學會使用AI快速產出符合公文格式的初稿，並懂得如何調整語氣與細節。</p>
+
+                <h3 class=&quot;section-subtitle&quot;>📝 操作步驟</h3>
+                <ol>
+                    <li><strong>前置思考（2分鐘）：</strong> 如果你是臺中市勞工局的承辦人，收到這封公文時，最需要知道的核心資訊是哪三項？請寫下來。
+                        <div class=&quot;tip-box mt-2 mb-2&quot;>
+                            <p class=&quot;text-sm&quot;>💡 提示：報名資格？截止日期？聯絡窗口？</p>
+                        </div>
+                    </li>
+                    <li><strong>步驟 2：</strong> 使用下方的<strong>【公文草擬（函)】</strong>提示詞範本。</li>
+                    <li><strong>步驟 3：</strong> 將上方表格中的所有資訊，有條理地填入提示詞的「說明」要點欄位。</li>
+                    <li><strong>步驟 4：</strong> 完成其他必填欄位（受文者、計畫名稱等）。</li>
+                    <li><strong>步驟 5：</strong> 送出指令，檢視AI產出的公文初稿。</li>
+                    <li><strong>步驟 6：</strong> 閱讀初稿，檢查是否符合公文格式、資訊是否完整。</li>
+                </ol>
+
+                <div class=&quot;challenge-box&quot;>
+                    <h4 class=&quot;font-bold text-lg mb-2&quot;>🎯 進階挑戰（選做）</h4>
+                    <p class=&quot;mb-2&quot;><strong>挑戰 1：</strong> 針對AI產出的草稿，下達第二次指令：「請將語氣修改得更為懇切、更具夥伴關係，而不僅是上對下的指導口吻。」觀察前後差異。</p>
+                    <p><strong>挑戰 2：</strong> 請AI在公文末段增加一句：「如有疑問，歡迎來電洽詢本組承辦人王小明（分機1234）。」</p>
+                </div>
+
+                <div class=&quot;alert-box&quot;>
+                    <h4 class=&quot;font-bold mb-2&quot;>⚠️ 常見陷阱</h4>
+                    <ul class=&quot;list-disc list-inside space-y-1&quot;>
+                        <li><strong>格式不符：</strong> AI可能產出過於口語或不符「主旨-說明-辦法」結構的內容 → 在Prompt中強調「須符合台灣公文格式」</li>
+                        <li><strong>資訊冗贅：</strong> AI可能加入不必要的客套話 → 強調「精簡扼要」</li>
+                        <li><strong>缺少依據：</strong> 記得在「說明」第一點寫明來文字號</li>
+                    </ul>
+                </div>
+
+                <h3 class=&quot;section-subtitle&quot;>💭 個人應用反思（2分鐘）</h3>
+                <div class=&quot;tip-box&quot;>
+                    <p class=&quot;font-bold mb-2&quot;>請思考並記錄：</p>
+                    <ul class=&quot;space-y-2&quot;>
+                        <li>✏️ 我最常撰寫的公文類型是：<span class=&quot;text-gray-400&quot;>___________________</span></li>
+                        <li>✏️ 這類公文的固定格式有：<span class=&=&quot;text-gray-400&quot;>___________________</span></li>
+                        <li>✏️ 我需要在範本中新增的欄位：<span class=&quot;text-gray-400&quot;>___________________</span></li>
+                        <li>✏️ 我可以建立一個專屬於【某類公文】的萬用範本，下次只需填入變動的部分</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 範例二 -->
+            <div class=&quot;content-card&quot;>
+                <h2 class=&quot;example-title mb-0&quot;>💡 範例提示詞：公文草擬（函）</h2>
+                
+                <div class=&quot;success-box my-4&quot;>
+                    <p class=&quot;font-bold mb-2&quot;>✅ 公文Prompt 必備要素</p>
+                    <div class=&quot;space-y-1&quot;>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>發文機關【必填】</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>受文者【必填】</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>主旨（一句話說明目的）【必填】</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>說明（依據、內容、請求協助）【必填】</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>語氣風格（正式/懇切/命令式）【選填】</span></div>
+                    </div>
+                </div>
+
+<pre class=&quot;prompt-code&quot;><code># 角色
+你是一位勞動人力發展署的資深承辦人，熟悉公文寫作格式與用語。
+
+# 目標
+請草擬一份【函】的初稿，內容須符合台灣公務機關公文格式。
+
+# 關鍵資訊
+- 發文機關：勞動人力發展署
+- 受文者：【必填：例如「臺中市政府勞工局」】
+- 主旨：有關洽詢本署「【必填：計畫名稱】」申請資格一案，復如說明，請查照。
+- 說明：
+  一、依據貴單位OOO年O月O日OO字第OOOO號函辦理。
+  二、有關【計畫名稱】相關資訊，說明如下：
+      (一) 訓練期間：【必填】
+      (二) 課程內容：【必填】
+      (三) 報名資格：【必填】
+      (四) 報名方式：【必填】
+      (五) 最近一期開課日期：【必填】
+  三、請貴局協助將此資訊轉知轄下就業服務站，鼓勵符合資格之民眾踴躍報名。
+
+# 風格
+請使用台灣公務機關的正式書面語，格式須符合「主旨-說明」結構，語氣【選填：正式/懇切/平和】。
+
+# 特殊需求（選填）
+【例如：末段需附上承辦人聯絡方式】</code></pre>
+
+                <div class=&quot;tip-box mt-4&quot;>
+                    <p class=&quot;font-bold mb-2&quot;>💡 語氣調整示範</p>
+                    <p class=&quot;mb-2&quot;><strong>正式指導式：</strong>「請貴局確實轉知所屬單位辦理」</p>
+                    <p class=&quot;mb-2&quot;><strong>懇切夥伴式：</strong>「懇請貴局協助宣傳，共同協助失業勞工順利轉職」</p>
+                    <p><strong>平和通知式：</strong>「檢附相關資訊供參，如需進一步說明，歡迎來電洽詢」</p>
+                </div>
+            </div>
+
+            <hr class=&quot;divider&quot;>
+
+            <!-- 實作三 -->
+            <div class=&quot;content-card&quot;>
+                <div class=&quot;flex items-center justify-between mb-4&quot;>
+                    <h2 class=&quot;practice-title mb-0&quot;>
+                        🔍 實作三：新政策初步分析
+                    </h2>
+                    <div class=&quot;flex gap-2&quot;>
+                        <span class=&quot;badge badge-intermediate&quot;>⭐⭐ 進階</span>
+                        <span class=&quot;badge badge-time&quot;>⏱️ 30分鐘</span>
+                    </div>
+                </div>
+
+                <h3 class=&quot;section-subtitle&quot;>📋 背景情境</h3>
+                <p>你的主管對「為所有國民提供『終身學習帳戶』，每年補助一筆固定金額，供民眾自由選擇參加經認證的職業訓練課程」這個政策概念很感興趣。</p>
+                <p class=&quot;font-bold text-lg&quot;>📊 他請你在今天下班前，提供一份非常初步的議題分析，讓他能快速了解這個概念的全貌。</p>
+
+                <h3 class=&quot;section-subtitle&quot;>🎯 學習目標</h3>
+                <p>學會使用AI進行多角度政策分析，快速掌握新議題的利弊得失與利益關係人立場。</p>
+
+                <h3 class=&quot;section-subtitle&quot;>📝 操作步驟</h3>
+                <ol>
+                    <li><strong>步驟 1：</strong> 參考下方的<strong>【政策議題分析】</strong>提示詞範本。</li>
+                    <li><strong>步驟 2：</strong> 將主題設定為「推動全民終身學習帳戶制度」。</li>
+                    <li><strong>步驟 3：</strong> 向AI提問，請它產出利弊分析、利益關係人立場等。</li>
+                    <li><strong>步驟 4：</strong> 閱讀AI產出的分析報告，檢視是否涵蓋社會、經濟、財政三個面向。</li>
+                    <li><strong>步驟 5：</strong> 評估分析內容的合理性與完整性。</li>
+                </ol>
+
+                <div class=&quot;challenge-box&quot;>
+                    <h4 class=&quot;font-bold text-lg mb-2&quot;>🎯 進階挑戰（選做）</h4>
+                    <p class=&quot;mb-2&quot;><strong>挑戰 1：</strong> 追問AI：「請提供一兩個國外（例如：新加坡、法國）實施類似『個人學習帳戶』制度的成功或失敗案例。」</p>
+                    <p class=&quot;mb-2&quot;><strong>挑戰 2：</strong> 請AI將所有的分析結果，總結成一個適合放在簽呈「說明」部分的摘要表格。</p>
+                    <p><strong>挑戰 3：</strong> 請AI模擬「財政部」與「教育部」對此政策的可能立場差異。</p>
+                </div>
+
+                <div class=&quot;alert-box&quot;>
+                    <h4 class=&quot;font-bold mb-2&quot;>⚠️ 常見陷阱與對策</h4>
+                    <ul class=&quot;list-disc list-inside space-y-1&quot;>
+                        <li><strong>分析過於表面：</strong> AI可能產出「既無利也無弊」的空話 → 要求提供具體數據或案例支持</li>
+                        <li><strong>缺少台灣觀點：</strong> AI的分析可能偏向國外經驗 → 在Prompt中強調「以台灣的社會與財政現況為背景」</li>
+                        <li><strong>利益關係人分析籠統：</strong> 要求AI「針對每個利益關係人，說明其關切的前三大問題」</li>
+                    </ul>
+                </div>
+
+                <div class=&quot;tip-box&quot;>
+                    <h4 class=&quot;font-bold mb-2&quot;>💡 如何判斷AI分析的可信度？</h4>
+                    <ul class=&quot;list-disc list-inside space-y-1&quot;>
+                        <li>✓ 檢查論述是否有具體數據或案例資料來源支持（而非純概念性描述）</li>
+                        <li>✓ 分析是否涵蓋正反兩面（只談好處或只談壞處都要警覺）</li>
+                        <li>✓ 利益關係人立場是否符合常理（例如：企業真的會反對嗎？）</li>
+                        <li>✓ 最重要：AI的分析只是「起點」，務必搭配你的專業判斷與查證</li>
+                    </ul>
+                </div>
+
+                <h3 class=&quot;section-subtitle&quot;>🤝 同儕互評（3分鐘）</h3>
+                <ul class=&quot;list-disc list-inside space-y-2&quot;>
+                    <li>與夥伴分享你們生成的分析報告</li>
+                    <li>討論：AI產出中，哪個論點最有力？哪個論點最薄弱或最像空話？</li>
+                    <li>批判性思考：AI的分析是否缺少了某個重要的「台灣在地」觀點？</li>
+                    <li>互相學習：對方的Prompt在哪個部分設計得更好？</li>
+                </ul>
+
+                <h3 class=&quot;section-subtitle&quot;>💭 個人應用反思（2分鐘）</h3>
+                <div class=&quot;tip-box&quot;>
+                    <p class=&quot;font-bold mb-2&quot;>請思考並記錄：</p>
+                    <ul class=&quot;space-y-2&quot;>
+                        <li>✏️ 未來當我需要快速了解一個新業務或新議題時，使用AI分析將如何改變我的工作方式？</li>
+                        <li>✏️ 改變1：<span class=&quot;text-gray-400&quot;>_____________________________________</span></li>
+                        <li>✏️ 改變2：<span class=&quot;text-gray-400&quot;>_____________________________________</span></li>
+                        <li>✏️ 我最需要警覺的是：AI可能忽略哪些「只有實務工作者才知道」的眉角？</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 範例三 -->
+            <div class=&quot;content-card&quot;>
+                <h2 class=&quot;example-title mb-0&quot;>💡 範例提示詞：政策議題分析</h2>
+                
+                <div class=&quot;success-box my-4&quot;>
+                    <p class=&quot;font-bold mb-2&quot;>✅ 政策分析Prompt 必備架構</p>
+                    <div class=&quot;space-y-1&quot;>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>明確的分析角度（社會、經濟、財政等）</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>要求正反兩面論述</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>指定利益關係人清單</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>要求數據或案例支持</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>強調在地脈絡（台灣現況）</span></div>
+                    </div>
+                </div>
+
+<pre class=&quot;prompt-code&quot;><code># 角色
+你是一位中立的政策分析師，熟悉台灣的社會與財政現況。
+
+# 目標
+針對「【（例如：推動全民終身學習帳戶制度）】」這個主題，提供一份初步的利弊分析報告。
+
+# 分析架構
+1. 政策背景與目標
+   - 概述此政策的緣起與核心訴求
+   - 預期解決的問題
+
+2. 潛在效益分析（請從以下三個角度分析）
+   - 社會面：對民眾、勞動力素質的影響
+   - 經濟面：對產業發展、就業市場的影響
+   - 財政面：政府的投資報酬率評估
+
+3. 潛在挑戰與風險（請從上述三個角度分析）
+   - 可能遭遇的困難
+   - 負面衝擊與副作用
+
+4. 利益關係人分析
+   請找出主要的利益關係人（例如：勞工、企業、訓練機構、工會、NPO組織），並分析：
+   - 各方的立場（支持/反對/中立）
+   - 各方關切的前三大問題
+
+5. 國際經驗參考（選填）
+   - 有無類似政策的國際案例？
+   - 成功或失敗的關鍵因素
+
+6. 總結與建議
+   - 綜合評估此政策的可行性
+   - 需要優先克服的障礙
+
+# 要求
+- 每個論點請盡可能提供具體數據或案例支持
+- 分析需考量「台灣特殊的社會與財政條件」
+- 保持中立客觀，避免單方面立場
+
+# 輸出格式
+請以結構化的報告形式呈現，使用清楚的標題與分點說明。</code></pre>
+
+                <div class=&quot;tip-box mt-4&quot;>
+                    <p class=&quot;font-bold mb-2&quot;>💡 進階技巧：如何深化分析？</p>
+                    <p class=&quot;mb-2&quot;><strong>追問策略1：</strong>「請針對『中小企業主』這個利益關係人，詳細分析他們可能反對的三個理由」</p>
+                    <p class=&quot;mb-2&quot;><strong>追問策略2：</strong>「如果預算有限，此政策可以先從哪個族群試辦？請說明理由」</p>
+                    <p><strong>追問策略3：</strong>「請將上述分析整理成一個SWOT分析表格」</p>
+                </div>
+            </div>
+
+            <hr class=&quot;divider&quot;>
+
+            <!-- 實作四 -->
+            <div class=&quot;content-card&quot;>
+                <div class=&quot;flex items-center justify-between mb-4&quot;>
+                    <h2 class=&quot;practice-title mb-0&quot;>
+                        📰 實作四：新聞稿生成
+                    </h2>
+                    <div class=&quot;flex gap-2&quot;>
+                        <span class=&quot;badge badge-beginner&quot;>⭐ 基礎</span>
+                        <span class=&quot;badge badge-time&quot;>⏱️ 20分鐘</span>
+                    </div>
+                </div>
+
+                <h3 class=&quot;section-subtitle&quot;>📋 背景情境</h3>
+                <p>「2026全國青年職涯發展論壇」剛剛圓滿落幕，成果豐碩。你的主管請你立即撰寫一篇新聞稿，發布給各大媒體，以宣傳本署在促進青年就業上的努力與成果。</p>
+
+                <h3 class=&quot;section-subtitle&quot;>📊 關鍵資訊要點</h3>
+                <table class=&quot;info-table&quot;>
+                    <tr>
+                        <th style=&quot;width: 30%;&quot;>項目</th>
+                        <th>內容</th>
+                    </tr>
+                    <tr>
+                        <td><strong>活動名稱</strong></td>
+                        <td>2026全國青年職涯發展論壇</td>
+                    </tr>
+                    <tr>
+                        <td><strong>時間</strong></td>
+                        <td>2025年12月30日</td>
+                    </tr>
+                    <tr>
+                        <td><strong>地點</strong></td>
+                        <td>台北國際會議中心 (TICC)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>主辦單位</strong></td>
+                        <td>勞動人力發展署</td>
+                    </tr>
+                    <tr>
+                        <td><strong>出席長官</strong></td>
+                        <td>署長 王OO</td>
+                    </tr>
+                    <tr>
+                        <td><strong>活動亮點</strong></td>
+                        <td>
+                            • 邀請台積電人資長分享「未來AI人才趨勢」<br>
+                            • 發布「2026青年就業趨勢白皮書」<br>
+                            • 提供超過1,000個實習與正職媒合機會，初步媒合率達40%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>長官引言</strong></td>
+                        <td>署長王OO表示：「勞動部致力於打造一個讓青年敢夢、能飛的就業環境，本次論壇就是最好的平台。」</td>
+                    </tr>
+                </table>
+
+                <h3 class=&quot;section-subtitle&quot;>🎯 學習目標</h3>
+                <p>學會使用AI快速產出吸引媒體注意的新聞稿，掌握新聞稿的結構與要素。</p>
+
+                <h3 class=&quot;section-subtitle&quot;>📝 操作步驟</h3>
+                <ol>
+                    <li><strong>步驟 1：</strong> 詳細閱讀上方的「關鍵資訊要點」表格。</li>
+                    <li><strong>步驟 2：</strong> 使用下方的<strong>【新聞稿撰寫】</strong>提示詞範本。</li>
+                    <li><strong>步驟 3：</strong> 將表格中的所有資訊逐一填入提示詞的 <code># 資訊</code> 區塊。</li>
+                    <li><strong>步驟 4：</strong> 送出指令，檢視AI生成的新聞稿初稿。</li>
+                    <li><strong>步驟 5：</strong> 檢查新聞稿是否包含：吸引人的標題、導言（5W1H）、內容段落、背景資訊。</li>
+                </ol>
+
+                <div class=&quot;challenge-box&quot;>
+                    <h4 class=&quot;font-bold text-lg mb-2&quot;>🎯 進階挑戰（選做）</h4>
+                    <p class=&quot;mb-2&quot;><strong>挑戰 1：</strong> 針對AI產出的初稿，下達第二次指令：「請為這篇新聞稿生成3個不同風格的標題：(1)數據導向型 (2)情感訴求型 (3)政策宣示型」</p>
+                    <p><strong>挑戰 2：</strong> 請AI將新聞稿濃縮成一則「100字社群媒體貼文」，適合發布在Facebook或LINE。</p>
+                </div>
+
+                <div class=&quot;alert-box&quot;>
+                    <h4 class=&quot;font-bold mb-2&quot;>⚠️ 常見陷阱</h4>
+                    <ul class=&quot;list-disc list-inside space-y-1&quot;>
+                        <li><strong>標題不夠吸睛：</strong> AI可能產出平淡的標題 → 要求「標題需包含具體成果數字」</li>
+                        <li><strong>內容過於官腔：</strong> 太多套話會讓媒體不想採用 → 強調「具體成果」與「人物故事」</li>
+                        <li><strong>缺少媒體聯絡資訊：</strong> 記得在末段加上「新聞聯絡人：XXX，電話：XXX」</li>
+                    </ul>
+                </div>
+
+                <div class=&quot;tip-box&quot;>
+                    <h4 class=&quot;font-bold mb-2&quot;>💡 什麼樣的新聞稿會被媒體採用？</h4>
+                    <ul class=&quot;list-disc list-inside space-y-1&quot;>
+                        <li>✓ 標題有具體數字或亮點（例如：「媒合率達40%」比「成果豐碩」更吸引人）</li>
+                        <li>✓ 導言清楚交代5W1H（何人、何時、何地、何事、為何、如何）</li>
+                        <li>✓ 有人物語錄（長官或參與者的第一人稱發言）</li>
+                        <li>✓ 有具體故事或案例（而非只有政策說明）</li>
+                    </ul>
+                </div>
+
+                <h3 class=&quot;section-subtitle&quot;>💭 個人應用反思（2分鐘）</h3>
+                <div class=&quot;tip-box&quot;>
+                    <p class=&quot;font-bold mb-2&quot;>請思考並記錄：</p>
+                    <ul class=&quot;space-y-2&quot;>
+                        <li>✏️ 我單位最近完成的專案或活動：<span class=&quot;text-gray-400&quot;>___________________</span></li>
+                        <li>✏️ 這個活動最值得對外宣傳的三個亮點：<span class=&quot;text-gray-400&quot;>___________________</span></li>
+                        <li>✏️ 如果要為這個活動寫新聞稿，我需要在範本中調整：<span class=&quot;text-gray-400&quot;>___________________</span></li>
+                        <li>✏️ 除了對外新聞稿，我也可以用這個技巧產出「內部成果報告」或「長官簡報」</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 範例四 -->
+            <div class=&quot;content-card&quot;>
+                <h2 class=&quot;example-title mb-0&quot;>💡 範例提示詞：新聞稿撰寫</h2>
+                
+                <div class=&quot;success-box my-4&quot;>
+                    <p class=&=&quot;font-bold mb-2&quot;>✅ 新聞稿Prompt 必備要素</p>
+                    <div class=&quot;space-y-1&quot;>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>活動基本資訊（5W1H）</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>具體成果與數據</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>長官或關鍵人物語錄</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>指定字數與風格</span></div>
+                        <div class=&quot;checklist-item&quot;><span>☑</span><span>聯絡資訊（選填）</span></div>
+                    </div>
+                </div>
+
+<pre class=&quot;prompt-code&quot;><code># 角色
+你是一位經驗豐富的公關專員，擅長撰寫吸引媒體注意的新聞稿。
+
+# 目標
+根據下方提供的活動資訊，撰寫一篇約500字的新聞稿。
+
+# 資訊
+- 活動名稱：【必填：例如：2025全國青年職涯發展論壇】
+- 時間：【必填：日期與時間】
+- 地點：【必填】
+- 主辦單位：勞動人力發展署
+- 出席長官：【必填：署長姓名職稱】
+- 活動亮點：【必填：條列3-5個】
+  例如：
+  • 邀請台積電人資長分享「未來AI人才趨勢」
+  • 發布「2025青年就業趨勢白皮書」
+  • 現場提供超過1,000個實習與正職媒合機會，初步媒合率達40%
+- 長官引言：【必填：署長說：「...」】
+
+# 結構要求
+1. 標題：需吸引眼球，並包含核心成果或數字
+2. 導言（第一段）：以倒金字塔方式，用1-2句話總結最重要的5W1H
+3. 內容段落：
+   - 第2段：活動背景與目的
+   - 第3段：具體成果與亮點
+   - 第4段：長官語錄與政策意義
+4. 結尾：提供主辦單位背景資訊
+5. 聯絡資訊：新聞聯絡人【選填】
+
+# 風格
+- 正面、流暢、具新聞價值
+- 避免過多官腔套話
+- 強調具體成果與數據
+- 適合媒體直接採用
+
+# 字數
+約500字（可彈性調整至400-600字）</code></pre>
+
+                <div class=&quot;tip-box mt-4&quot;>
+                    <p class=&quot;font-bold mb-2&quot;>💡 標題範例比較</p>
+                    <table class=&quot;info-table mt-2&quot;>
+                        <tr>
+                            <th style=&quot;width: 30%;&quot;>類型</th>
+                            <th>範例</th>
+                        </tr>
+                        <tr>
+                            <td><strong>❌ 平淡型</strong></td>
+                            <td>勞動部舉辦青年就業論壇</td>
+                        </tr>
+                        <tr>
+                            <td><strong>✅ 數據型</strong></td>
+                            <td>千個職缺、四成媒合！青年職涯論壇創佳績</td>
+                        </tr>
+                        <tr>
+                            <td><strong>✅ 情感型</strong></td>
+                            <td>讓青年敢夢能飛！全國職涯論壇點燃就業熱情</td>
+                        </tr>
+                        <tr>
+                            <td><strong>✅ 政策型</strong></td>
+                            <td>勞動部打造AI時代人才：青年職涯論壇啟動轉型</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- 課程總結 -->
+        <div class=&quot;content-card&quot; style=&quot;background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;&quot;>
+            <h2 class=&quot;text-2xl font-bold mb-4&quot;>🎓 課程總結與下一步</h2>
+            <p class=&quot;mb-4&quot;>恭喜您完成四個實作練習！現在您已經掌握了AI在公務工作中的四大應用場景。</p>
+            
+            <h3 class=&quot;text-xl font-bold mb-2&quot;>📌 關鍵takeaways</h3>
+            <ul class=&quot;list-disc list-inside space-y-2 mb-4&quot;>
+                <li><strong>AI是助手，不是替代：</strong>您的專業判斷與在地知識，才是最終品質的保證</li>
+                <li><strong>好的Prompt = 清楚的指令：</strong>角色、目標、資訊、格式、風格，缺一不可</li>
+                <li><strong>迭代優化：</strong>第一次產出不滿意？追問、調整、再生成！</li>
+                <li><strong>建立個人範本庫：</strong>將今天學到的Prompt存檔，下次直接套用</li>
+            </ul>
+
+            <h3 class=&quot;text-xl font-bold mb-2&quot;>🚀 立即行動</h3>
+            <div class=&quot;bg-white bg-opacity-20 p-4 rounded space-y-2&quot;>
+                <p><strong>今天下班前：</strong>選擇一個今天學到的技巧，應用在你的實際工作中</p>
+                <p><strong>本週內：</strong>建立你的「AI工作助手範本庫」（至少3個常用情境）</p>
+                <p><strong>下個月：</strong>追蹤你使用AI後節省的時間，並思考如何運用這些時間創造更大價值</p>
+            </div>
+        </div>
+
+        <!-- 疑難排解 -->
+        <div class=&quot;content-card&quot;>
+            <h2 class=&quot;text-2xl font-bold mb-4 text-gray-800&quot;>🔧 疑難排解 Q&A</h2>
+            
+            <div class=&quot;space-y-4&quot;>
+                <div>
+                    <p class=&quot;font-bold text-lg text-blue-900&quot;>Q1: AI產出的內容不符需求怎麼辦？</p>
+                    <p class=&quot;ml-4 text-gray-700&quot;><strong>A:</strong> 三個調整策略：</p>
+                    <ul class=&quot;list-disc list-inside ml-8 text-gray-700&quot;>
+                        <li>在原Prompt後追問：「請修改為...」</li>
+                        <li>提供正反範例：「要像A，不要像B」</li>
+                        <li>分段處理：先產出大綱，確認後再展開內容</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class=&quot;font-bold text-lg text-blue-900&quot;>Q2: 如何讓AI的語氣更符合公務體系？</p>
+                    <p class=&quot;ml-4 text-gray-700&quot;><strong>A:</strong> 在「風格」欄位明確指定：「請使用台灣公務機關正式書面語，避免口語化與過度熱情的表達」，或提供一份你認為理想的範本讓AI模仿。</p>
+                </div>
+
+                <div>
+                    <p class=&quot;font-bold text-lg text-blue-900&quot;>Q3: 不同的AI工具（ChatGPT、Gemini、Copilot）有差異嗎？</p>
+                    <p class=&quot;ml-4 text-gray-700&quot;><strong>A:</strong> 核心能力類似，但各有特色：</p>
+                    <ul class=&quot;list-disc list-inside ml-8 text-gray-700&quot;>
+                        <li><strong>ChatGPT:</strong> 對話流暢，中文理解佳</li>
+                        <li><strong>Gemini:</strong> 整合Google搜尋，適合需要即時資訊的任務</li>
+                        <li><strong>Copilot:</strong> 整合Office，適合在Word、Excel中直接使用</li>
+                    </ul>
+                    <p class=&quot;ml-4 mt-2 text-gray-700&quot;>建議：用相同的Prompt在不同工具測試，找出最適合你的！</p>
+                </div>
+
+                <div>
+                    <p class=&quot;font-bold text-lg text-blue-900&quot;>Q4: 使用AI撰寫公文，會不會有資安疑慮？</p>
+                    <p class=&quot;ml-4 text-gray-700&quot;><strong>A:</strong> 務必注意：</p>
+                    <ul class=&quot;list-disc list-inside ml-8 text-gray-700&quot;>
+                        <li>❌ 不要輸入個資、機密資料、真實姓名電話</li>
+                        <li>✅ 可使用「OO署」「XXX計畫」等代稱</li>
+                        <li>✅ AI產出的內容僅作為「草稿」，最終仍需人工審核</li>
+                        <li>✅ 遵守機關資安規範，必要時使用內部部署版AI工具</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 延伸學習 -->
+        <div class=&quot;content-card&quot;>
+            <h2 class=&quot;text-2xl font-bold mb-4 text-gray-800&quot;>📚 延伸學習資源</h2>
+            
+            <h3 class=&quot;text-lg font-bold mb-2 text-gray-700&quot;>🎓 想更深入學習Prompt工程？</h3>
+            <ul class=&quot;list-disc list-inside ml-4 mb-4 text-gray-700&quot;>
+                <li>OpenAI官方Prompt Guide（英文）</li>
+                <li>Google AI for Developers（英文）</li>
+                <li>Llama 2: Prompt Engineering Guide（英文）</li>
+            </ul>
+
+            <h3 class=&quot;text-lg font-bold mb-2 text-gray-700&quot;>📈 關注AI在公部門的應用趨勢？</h3>
+            <ul class=&quot;list-disc list-inside ml-4 mb-4 text-gray-700&quot;>
+                <li>數位發展部 moda</li>
+                <li>國家發展委員會 NDC</li>
+                <li>哈佛商業評論（HBR）</li>
+            </ul>
+        </div>
+
+    </main>
+
+</body>
+</html>" class="w-full h-full border-0"></iframe>
             </div>
         </div>
     </div>
